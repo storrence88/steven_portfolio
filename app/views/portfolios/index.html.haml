@@ -1,0 +1,10 @@
+%h1 Portfolio Items
+
+- @portfolio_items.each do |item|
+  %p
+    = item.title
+  %p
+    = item.subtitle
+  %p
+    = item.body
+  %img{src: "#{item.thumb_image}"}
