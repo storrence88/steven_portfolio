@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  helper_method :portfolio_items
+  helper_method :portfolio_items, :portfolio_item
 
   # Renders the index view
   def index
@@ -8,6 +8,7 @@ class PortfoliosController < ApplicationController
 
   # Renders the new view
   def new
+    @portfolio_item = Portfolio.new
   end
 
   # Creates a new Portfolio record
@@ -16,5 +17,5 @@ class PortfoliosController < ApplicationController
 
   private
 
-  attr_reader :portfolio_items
+  attr_reader :portfolio_items, :portfolio_item
 end
