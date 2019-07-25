@@ -2,7 +2,7 @@
 
 - portfolio_items.each do |item|
   %p
-    = item.title
+    = link_to "#{item.title}", edit_portfolio_path(item)
   %p
     = item.subtitle
   %p
