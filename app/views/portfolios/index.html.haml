@@ -2,9 +2,10 @@
 
 - portfolio_items.each do |item|
   %p
-    = link_to "#{item.title}", edit_portfolio_path(item)
+    = link_to "#{item.title}", portfolio_path(item)
   %p
     = item.subtitle
   %p
     = item.body
   %img{src: "#{item.thumb_image}"}
+  = link_to 'Delete Portfolio Item', portfolio_path(item), method: :delete, data: {confirm: 'Are you sure?'}
