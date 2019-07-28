@@ -8,6 +8,7 @@
 %p
   %strong Body:
   = portfolio_item.body
+= image_tag portfolio_item.main_image
 = link_to 'Edit', edit_portfolio_path(portfolio_item)
 |
 = link_to 'Back', portfolios_path
